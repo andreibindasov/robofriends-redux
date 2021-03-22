@@ -1,15 +1,23 @@
 version: 2
 jobs:
-  build:
+  build_1:
     docker:
       - image: circleci/ruby:2.4.1
      
     steps:
       - checkout
       - run: echo 'Hello World!'
+  build_2:
+    docker:
+      - image: circleci/ruby:2.4.1
+     
+    steps:
+      - checkout
+      - run: echo 'Double trouble!'
           
 workflows:
   version: 2
-  build_1:
+  builds:
     jobs:
-      - build
+      - build_1
+      - build_2
