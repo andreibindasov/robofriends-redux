@@ -18,12 +18,12 @@ jobs:
       - run: echo 'testing'
       - run: npm install
       - run: npm test
-    hitthere:
-      docker:
-        - image: circleci/node:8.9
-      steps:
-        - checkout
-        - run: echo "helllooooooooo"    
+  hitthere:
+    docker:
+      - image: circleci/node:8.9
+    steps:
+      - checkout
+      - run: echo "helllooooooooo"    
           
 workflows:
   version: 2
